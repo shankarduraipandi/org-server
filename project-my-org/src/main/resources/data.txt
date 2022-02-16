@@ -1,0 +1,6 @@
+INSERT INTO `users` (`account_non_expired`, `account_non_locked`, `credentials_non_expired`, `enabled`, `password`, `username`, `email`, `uuid`) 
+VALUES (1, 1, 1, 1, '$2a$12$.q5B5PC0seqU4fGCTkDIPexjsW88f6rRvvHKh.43vbE/ZE9x0iyIa', 'admin', 'admin@gmail.com', '0580fa95-d7b4-46f1-8c62-eb7f9444420c');
+
+INSERT INTO `roles` (`name`) VALUES ('ROLE_SUPER_ADMIN');
+
+insert into user_roles VALUES (1, 1);
