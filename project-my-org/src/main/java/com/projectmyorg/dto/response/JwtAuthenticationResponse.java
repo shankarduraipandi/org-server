@@ -14,8 +14,6 @@ public class JwtAuthenticationResponse extends BaseResponse {
 	private String accessToken;
     private String tokenType = Constants.TOKEN_TYPE;
     
-    
-    
 	/**
 	 * 
 	 */

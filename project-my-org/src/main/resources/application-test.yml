@@ -1,4 +1,6 @@
 spring:
+  main:
+    allow-circular-references: true
   datasource:
     url: jdbc:h2:file:./data/h2db      #mem:testdb
     driver-class-name: org.h2.Driver

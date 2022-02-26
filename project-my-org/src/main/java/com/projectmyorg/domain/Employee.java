@@ -80,7 +80,7 @@ public class Employee implements Serializable {
 	
 	@Column(name = "common_manager_id")
 	private Long commonManagerId;
-
+	
 	/**
 	 * @return the id
 	 */
