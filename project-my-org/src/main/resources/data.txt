@@ -3,4 +3,5 @@ VALUES (1, 1, 1, 1, '$2a$12$.q5B5PC0seqU4fGCTkDIPexjsW88f6rRvvHKh.43vbE/ZE9x0iyI
 
 INSERT INTO `roles` (`name`) VALUES ('ROLE_SUPER_ADMIN');
 
+
 insert into user_roles VALUES (1, 1);

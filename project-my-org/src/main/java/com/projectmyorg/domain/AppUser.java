@@ -3,7 +3,9 @@ package com.projectmyorg.domain;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -13,11 +15,14 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
+import com.projectmyorg.domain.masters.Group;
+import com.projectmyorg.domain.masters.Node;
 import com.projectmyorg.domain.masters.Role;
 
 /**
@@ -71,6 +76,20 @@ public class AppUser implements Serializable {
 				joinColumns = @JoinColumn(name = "user_id"), 
 				inverseJoinColumns = @JoinColumn(name = "role_id"))
 	private List<Role> roles = new ArrayList<>();
+	
+	@OneToOne(cascade = CascadeType.ALL)
+    @JoinTable(name = "user_group", 
+      joinColumns = 
+        { @JoinColumn(name = "user_id", referencedColumnName = "id") },
+      inverseJoinColumns = 
+        { @JoinColumn(name = "group_id", referencedColumnName = "id") })
+	private Group group;
+	
+	@ManyToMany(fetch = FetchType.LAZY)
+	@JoinTable(	name = "user_nodes", 
+				joinColumns = @JoinColumn(name = "user_id"), 
+				inverseJoinColumns = @JoinColumn(name = "node_id"))
+	private Set<Node> nodes;
 
     public Long getId() {
         return id;
@@ -162,4 +181,32 @@ public class AppUser implements Serializable {
         return serialVersionUID;
     }
 
+	/**
+	 * @return the group
+	 */
+	public Group getGroup() {
+		return group;
+	}
+
+	/**
+	 * @param group the group to set
+	 */
+	public void setGroup(Group group) {
+		this.group = group;
+	}
+
+	/**
+	 * @return the nodes
+	 */
+	public Set<Node> getNodes() {
+		return nodes;
+	}
+
+	/**
+	 * @param nodes the nodes to set
+	 */
+	public void setNodes(Set<Node> nodes) {
+		this.nodes = nodes;
+	}
+	
 }

@@ -3,6 +3,8 @@
  */
 package com.projectmyorg.dto.response;
 
+import com.projectmyorg.commons.ResponseMessages;
+
 /**
  * @author Shankar D
  *
@@ -17,6 +19,8 @@ public class BaseResponse {
 	 */
 	public BaseResponse() {
 		super();
+		this.status = true;
+		this.message = ResponseMessages.SUCCESS;
 	}
 	
 	

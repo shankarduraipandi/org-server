@@ -6,7 +6,7 @@ package com.projectmyorg.domain.enums;
  */
 public enum ERole {
 
-    ROLE_SUPER_ADMIN,
+    ROLE_ORG_ADMIN,
     ROLE_ADMIN,
     ROLE_USER
 
