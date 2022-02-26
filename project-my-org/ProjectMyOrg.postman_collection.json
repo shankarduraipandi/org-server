@@ -1,0 +1,1443 @@
+{
+	"info": {
+		"_postman_id": "44de58bb-772c-494e-8797-087040475aa3",
+		"name": "ProjectMyOrg",
+		"description": "# Introduction\n\n# Overview\n\n# Authentication\n\n# Error Codes\n\n# Rate limit",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Org-Setup",
+			"item": [
+				{
+					"name": "Employee Type",
+					"item": [
+						{
+							"name": "Save",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTM1ODA2MiwiaWF0IjoxNjQ1MjcxNjYyLCJhdXRob3JpdGllcyI6WyJST0xFX1NVUEVSX0FETUlOIl19.C1-Q5GNMjsaSkkTHKlIdHGUoN93R048wQH4uCpekxB0fAZkOyAeP-203MA3CFuS9UV3UGyddAlL4z1ZJU3vDDw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"empType\": \"Vendor\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url:80}}/api/v1/org/emp_type",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"org",
+										"emp_type"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTM1ODA2MiwiaWF0IjoxNjQ1MjcxNjYyLCJhdXRob3JpdGllcyI6WyJST0xFX1NVUEVSX0FETUlOIl19.C1-Q5GNMjsaSkkTHKlIdHGUoN93R048wQH4uCpekxB0fAZkOyAeP-203MA3CFuS9UV3UGyddAlL4z1ZJU3vDDw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url:80}}/api/v1/org/emp_type",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"org",
+										"emp_type"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Department",
+					"item": [
+						{
+							"name": "Save",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTM1ODA2MiwiaWF0IjoxNjQ1MjcxNjYyLCJhdXRob3JpdGllcyI6WyJST0xFX1NVUEVSX0FETUlOIl19.C1-Q5GNMjsaSkkTHKlIdHGUoN93R048wQH4uCpekxB0fAZkOyAeP-203MA3CFuS9UV3UGyddAlL4z1ZJU3vDDw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"dept\": \"Enterprise\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url:80}}/api/v1/org/dept",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"org",
+										"dept"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTM1ODA2MiwiaWF0IjoxNjQ1MjcxNjYyLCJhdXRob3JpdGllcyI6WyJST0xFX1NVUEVSX0FETUlOIl19.C1-Q5GNMjsaSkkTHKlIdHGUoN93R048wQH4uCpekxB0fAZkOyAeP-203MA3CFuS9UV3UGyddAlL4z1ZJU3vDDw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url:80}}/api/v1/org/dept",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"org",
+										"dept"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Job Role",
+					"item": [
+						{
+							"name": "Save",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTM1ODA2MiwiaWF0IjoxNjQ1MjcxNjYyLCJhdXRob3JpdGllcyI6WyJST0xFX1NVUEVSX0FETUlOIl19.C1-Q5GNMjsaSkkTHKlIdHGUoN93R048wQH4uCpekxB0fAZkOyAeP-203MA3CFuS9UV3UGyddAlL4z1ZJU3vDDw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"jobRole\": \"Software Engineer\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url:80}}/api/v1/org/job_role",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"org",
+										"job_role"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTM1ODA2MiwiaWF0IjoxNjQ1MjcxNjYyLCJhdXRob3JpdGllcyI6WyJST0xFX1NVUEVSX0FETUlOIl19.C1-Q5GNMjsaSkkTHKlIdHGUoN93R048wQH4uCpekxB0fAZkOyAeP-203MA3CFuS9UV3UGyddAlL4z1ZJU3vDDw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url:80}}/api/v1/org/job_role",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"org",
+										"job_role"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Location",
+					"item": [
+						{
+							"name": "Create Country",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTM1ODA2MiwiaWF0IjoxNjQ1MjcxNjYyLCJhdXRob3JpdGllcyI6WyJST0xFX1NVUEVSX0FETUlOIl19.C1-Q5GNMjsaSkkTHKlIdHGUoN93R048wQH4uCpekxB0fAZkOyAeP-203MA3CFuS9UV3UGyddAlL4z1ZJU3vDDw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"country\": \"India\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url:80}}/api/v1/org/country",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"org",
+										"country"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List Country",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTM1ODA2MiwiaWF0IjoxNjQ1MjcxNjYyLCJhdXRob3JpdGllcyI6WyJST0xFX1NVUEVSX0FETUlOIl19.C1-Q5GNMjsaSkkTHKlIdHGUoN93R048wQH4uCpekxB0fAZkOyAeP-203MA3CFuS9UV3UGyddAlL4z1ZJU3vDDw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url:80}}/api/v1/org/country",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"org",
+										"country"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create State",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTM1ODA2MiwiaWF0IjoxNjQ1MjcxNjYyLCJhdXRob3JpdGllcyI6WyJST0xFX1NVUEVSX0FETUlOIl19.C1-Q5GNMjsaSkkTHKlIdHGUoN93R048wQH4uCpekxB0fAZkOyAeP-203MA3CFuS9UV3UGyddAlL4z1ZJU3vDDw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"state\": \"Tamilnadu\",\r\n    \"country\": \"India\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url:80}}/api/v1/org/state",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"org",
+										"state"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List State",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTM1ODA2MiwiaWF0IjoxNjQ1MjcxNjYyLCJhdXRob3JpdGllcyI6WyJST0xFX1NVUEVSX0FETUlOIl19.C1-Q5GNMjsaSkkTHKlIdHGUoN93R048wQH4uCpekxB0fAZkOyAeP-203MA3CFuS9UV3UGyddAlL4z1ZJU3vDDw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url:80}}/api/v1/org/state?country=India",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"org",
+										"state"
+									],
+									"query": [
+										{
+											"key": "country",
+											"value": "India"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create City",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTM1ODA2MiwiaWF0IjoxNjQ1MjcxNjYyLCJhdXRob3JpdGllcyI6WyJST0xFX1NVUEVSX0FETUlOIl19.C1-Q5GNMjsaSkkTHKlIdHGUoN93R048wQH4uCpekxB0fAZkOyAeP-203MA3CFuS9UV3UGyddAlL4z1ZJU3vDDw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"city\": \"Covai\",\r\n    \"state\": \"Tamilnadu\",\r\n    \"country\": \"India\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url:80}}/api/v1/org/city",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"org",
+										"city"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List City",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTM1ODA2MiwiaWF0IjoxNjQ1MjcxNjYyLCJhdXRob3JpdGllcyI6WyJST0xFX1NVUEVSX0FETUlOIl19.C1-Q5GNMjsaSkkTHKlIdHGUoN93R048wQH4uCpekxB0fAZkOyAeP-203MA3CFuS9UV3UGyddAlL4z1ZJU3vDDw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url:80}}/api/v1/org/city?country=India&state=Tamilnadu",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"org",
+										"city"
+									],
+									"query": [
+										{
+											"key": "country",
+											"value": "India"
+										},
+										{
+											"key": "state",
+											"value": "Tamilnadu"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Job Location",
+					"item": [
+						{
+							"name": "Save",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTM1ODA2MiwiaWF0IjoxNjQ1MjcxNjYyLCJhdXRob3JpdGllcyI6WyJST0xFX1NVUEVSX0FETUlOIl19.C1-Q5GNMjsaSkkTHKlIdHGUoN93R048wQH4uCpekxB0fAZkOyAeP-203MA3CFuS9UV3UGyddAlL4z1ZJU3vDDw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"office\": \"SFW\",\r\n    \"address\": \"NA\",\r\n    \"city\": \"Covai\",\r\n    \"state\": \"Tamilnadu\",\r\n    \"country\": \"India\",\r\n    \"fax\": \"NA\",\r\n    \"phone\": \"NA\",\r\n    \"email\": \"sfw@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url:80}}/api/v1/org/job_location",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"org",
+										"job_location"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTM1ODA2MiwiaWF0IjoxNjQ1MjcxNjYyLCJhdXRob3JpdGllcyI6WyJST0xFX1NVUEVSX0FETUlOIl19.C1-Q5GNMjsaSkkTHKlIdHGUoN93R048wQH4uCpekxB0fAZkOyAeP-203MA3CFuS9UV3UGyddAlL4z1ZJU3vDDw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url:80}}/api/v1/org/job_location",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"org",
+										"job_location"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Employee",
+					"item": [
+						{
+							"name": "Create an Employee",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTM1ODA2MiwiaWF0IjoxNjQ1MjcxNjYyLCJhdXRob3JpdGllcyI6WyJST0xFX1NVUEVSX0FETUlOIl19.C1-Q5GNMjsaSkkTHKlIdHGUoN93R048wQH4uCpekxB0fAZkOyAeP-203MA3CFuS9UV3UGyddAlL4z1ZJU3vDDw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Santhosh\",\r\n    \"lastName\": \"Natarajan\",\r\n    \"email\": \"snatarajan@gmail.com\",\r\n    \"address\": \"NA\",\r\n    \"city\": \"Covai\",\r\n    \"state\": \"Tamilnadu\",\r\n    \"country\": \"India\",\r\n    \"phone\": \"NA\",\r\n    \"jobRole\": \"Software Engineer\",\r\n    \"dept\": \"Enterprise\",\r\n    \"employeeType\": \"Vendor\",\r\n    \"jobLocationUuid\": \"85e41a21-417c-4fad-af46-d5888a92c9cf\",\r\n    \"bio\": \"NA\",\r\n    \"commonManagerId\": \"ea90ca03-9a36-4661-9979-4ee590ae3d18\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url:80}}/api/v1/employee",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"employee"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List All Employee",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTM1ODA2MiwiaWF0IjoxNjQ1MjcxNjYyLCJhdXRob3JpdGllcyI6WyJST0xFX1NVUEVSX0FETUlOIl19.C1-Q5GNMjsaSkkTHKlIdHGUoN93R048wQH4uCpekxB0fAZkOyAeP-203MA3CFuS9UV3UGyddAlL4z1ZJU3vDDw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url:80}}/api/v1/employee",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"employee"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "Create User",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTM1ODA2MiwiaWF0IjoxNjQ1MjcxNjYyLCJhdXRob3JpdGllcyI6WyJST0xFX1NVUEVSX0FETUlOIl19.C1-Q5GNMjsaSkkTHKlIdHGUoN93R048wQH4uCpekxB0fAZkOyAeP-203MA3CFuS9UV3UGyddAlL4z1ZJU3vDDw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"username\": \"snatarajan\",\r\n    \"password\": \"snatarajan\",\r\n    \"roleType\": \"ROLE_USER\",\r\n    \"empUuid\": \"70efb4a4-e33a-4ecb-afba-aeec0326a173\",\r\n    \"userGroup\": \"employees\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url:80}}/api/v1/user",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Group",
+					"item": [
+						{
+							"name": "Save",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTM1ODA2MiwiaWF0IjoxNjQ1MjcxNjYyLCJhdXRob3JpdGllcyI6WyJST0xFX1NVUEVSX0FETUlOIl19.C1-Q5GNMjsaSkkTHKlIdHGUoN93R048wQH4uCpekxB0fAZkOyAeP-203MA3CFuS9UV3UGyddAlL4z1ZJU3vDDw",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"groupName\": \"employees\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url:80}}/api/v1/user/group",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"group"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTc2NjE5NCwiaWF0IjoxNjQ1Njc5Nzk0LCJhdXRob3JpdGllcyI6WyJST0xFX09SR19BRE1JTiJdfQ.Xz3kcuPfgIx9kPddwJvO-JEExHNLWwTk5aDWYYMNJHLzMERZ3x89cyqk35IeB21n5LkUgTU0Gna2gzS0tg8vdA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url:80}}/api/v1/user/group",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"group"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add Node to Group",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTc2NjE5NCwiaWF0IjoxNjQ1Njc5Nzk0LCJhdXRob3JpdGllcyI6WyJST0xFX09SR19BRE1JTiJdfQ.Xz3kcuPfgIx9kPddwJvO-JEExHNLWwTk5aDWYYMNJHLzMERZ3x89cyqk35IeB21n5LkUgTU0Gna2gzS0tg8vdA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"groupId\": 1,\r\n    \"nodeIds\": [\r\n        1, 2, 33\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url:80}}/api/v1/user/group/add_nodes",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"group",
+										"add_nodes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Service",
+					"item": [
+						{
+							"name": "Save",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTc2NjE5NCwiaWF0IjoxNjQ1Njc5Nzk0LCJhdXRob3JpdGllcyI6WyJST0xFX09SR19BRE1JTiJdfQ.Xz3kcuPfgIx9kPddwJvO-JEExHNLWwTk5aDWYYMNJHLzMERZ3x89cyqk35IeB21n5LkUgTU0Gna2gzS0tg8vdA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"value\": \"Organization Setup\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url:80}}/api/v1/org/service",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"org",
+										"service"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTc2NjE5NCwiaWF0IjoxNjQ1Njc5Nzk0LCJhdXRob3JpdGllcyI6WyJST0xFX09SR19BRE1JTiJdfQ.Xz3kcuPfgIx9kPddwJvO-JEExHNLWwTk5aDWYYMNJHLzMERZ3x89cyqk35IeB21n5LkUgTU0Gna2gzS0tg8vdA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url:80}}/api/v1/org/service/all",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"org",
+										"service",
+										"all"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Node",
+					"item": [
+						{
+							"name": "Save",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTc2NjE5NCwiaWF0IjoxNjQ1Njc5Nzk0LCJhdXRob3JpdGllcyI6WyJST0xFX09SR19BRE1JTiJdfQ.Xz3kcuPfgIx9kPddwJvO-JEExHNLWwTk5aDWYYMNJHLzMERZ3x89cyqk35IeB21n5LkUgTU0Gna2gzS0tg8vdA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Asset Transfer\",\r\n    \"orgService\": \"Office Resource\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url:80}}/api/v1/org/node",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"org",
+										"node"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTc2NjE5NCwiaWF0IjoxNjQ1Njc5Nzk0LCJhdXRob3JpdGllcyI6WyJST0xFX09SR19BRE1JTiJdfQ.Xz3kcuPfgIx9kPddwJvO-JEExHNLWwTk5aDWYYMNJHLzMERZ3x89cyqk35IeB21n5LkUgTU0Gna2gzS0tg8vdA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url:80}}/api/v1/org/node/all?service=Office Resource",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"org",
+										"node",
+										"all"
+									],
+									"query": [
+										{
+											"key": "service",
+											"value": "Office Resource"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Get User Nodes",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiI3MGVmYjRhNC1lMzNhLTRlY2ItYWZiYS1hZWVjMDMyNmExNzMiLCJ1c2VyX25hbWUiOiJzbmF0YXJhamFuIiwiZXhwIjoxNjQ1NzY3NjM1LCJpYXQiOjE2NDU2ODEyMzUsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdfQ.oRbuK3u2hD1tgXdEJUeGna1UJnH6F-iqA-qaujfJ93KN-xB0XKjSA8kq9mJL5id41Gpue0a44joqxztvELFZTA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url:80}}/api/v1/user/node/all",
+							"host": [
+								"{{url:80}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"node",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Asset",
+			"item": [
+				{
+					"name": "Asset Category",
+					"item": [
+						{
+							"name": "Add",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTk0MzI1OCwiaWF0IjoxNjQ1ODU2ODU4LCJhdXRob3JpdGllcyI6WyJST0xFX09SR19BRE1JTiJdfQ.GB4VexlybZj4RCawx7lOZfoeOBV8-o77M8s6s8XD2Ryo4TZ5GKijGSU4qYH162-k2nNLKNR2WiRE6Yxlgq_smA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"value\": \"Stationary\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url:80}}/api/v1/asset/category/add",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"asset",
+										"category",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTk0MzI1OCwiaWF0IjoxNjQ1ODU2ODU4LCJhdXRob3JpdGllcyI6WyJST0xFX09SR19BRE1JTiJdfQ.GB4VexlybZj4RCawx7lOZfoeOBV8-o77M8s6s8XD2Ryo4TZ5GKijGSU4qYH162-k2nNLKNR2WiRE6Yxlgq_smA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url:80}}/api/v1/asset/category/all",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"asset",
+										"category",
+										"all"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Asset Request",
+					"item": [
+						{
+							"name": "Add",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiJlYTkwY2EwMy05YTM2LTQ2NjEtOTk3OS00ZWU1OTBhZTNkMTgiLCJ1c2VyX25hbWUiOiJzZHVyYWlwYW5kaSIsImV4cCI6MTY0NTk0MzgyNiwiaWF0IjoxNjQ1ODU3NDI2LCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXX0.cZ7Fc-X0AIkZF10KjSi5SsoZthzrvBdWNEekOlu1n5dFX_ehP4nPMz0Wob32fG6W8s0KNgEosqnsYwGnNHfFaQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"assetNo\": \"SFW/ED/LP/001\",\r\n    \"tenure\": \"24\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url:80}}/api/v1/asset/request",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"asset",
+										"request"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "List",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiJlYTkwY2EwMy05YTM2LTQ2NjEtOTk3OS00ZWU1OTBhZTNkMTgiLCJ1c2VyX25hbWUiOiJzZHVyYWlwYW5kaSIsImV4cCI6MTY0NTk0MzgyNiwiaWF0IjoxNjQ1ODU3NDI2LCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXX0.cZ7Fc-X0AIkZF10KjSi5SsoZthzrvBdWNEekOlu1n5dFX_ehP4nPMz0Wob32fG6W8s0KNgEosqnsYwGnNHfFaQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url:80}}/api/v1/asset/request/user/all?status=APPROVED&page=1&size=10",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"asset",
+										"request",
+										"user",
+										"all"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "APPROVED"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiJlYTkwY2EwMy05YTM2LTQ2NjEtOTk3OS00ZWU1OTBhZTNkMTgiLCJ1c2VyX25hbWUiOiJzZHVyYWlwYW5kaSIsImV4cCI6MTY0NTk0MzgyNiwiaWF0IjoxNjQ1ODU3NDI2LCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXX0.cZ7Fc-X0AIkZF10KjSi5SsoZthzrvBdWNEekOlu1n5dFX_ehP4nPMz0Wob32fG6W8s0KNgEosqnsYwGnNHfFaQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"uuid\": \"2fe13c76-426f-43da-bede-78fb36146412\",\r\n    \"assetNo\": \"SFW/ED/LP/001\",\r\n    \"tenure\": \"36\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url:80}}/api/v1/asset/request",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"asset",
+										"request"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "View All Users Requests",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTk0MzI1OCwiaWF0IjoxNjQ1ODU2ODU4LCJhdXRob3JpdGllcyI6WyJST0xFX09SR19BRE1JTiJdfQ.GB4VexlybZj4RCawx7lOZfoeOBV8-o77M8s6s8XD2Ryo4TZ5GKijGSU4qYH162-k2nNLKNR2WiRE6Yxlgq_smA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url:80}}/api/v1/asset/request/all?status=APPROVED&page=1&size=10",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"asset",
+										"request",
+										"all"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "APPROVED"
+										},
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "size",
+											"value": "10"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "APPROVE/REJECT",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTk0MzI1OCwiaWF0IjoxNjQ1ODU2ODU4LCJhdXRob3JpdGllcyI6WyJST0xFX09SR19BRE1JTiJdfQ.GB4VexlybZj4RCawx7lOZfoeOBV8-o77M8s6s8XD2Ryo4TZ5GKijGSU4qYH162-k2nNLKNR2WiRE6Yxlgq_smA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"uuid\": \"2fe13c76-426f-43da-bede-78fb36146412\",\r\n    \"status\": \"APPROVED\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{url:80}}/api/v1/asset/request/status",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"asset",
+										"request",
+										"status"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Status",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTk0MzI1OCwiaWF0IjoxNjQ1ODU2ODU4LCJhdXRob3JpdGllcyI6WyJST0xFX09SR19BRE1JTiJdfQ.GB4VexlybZj4RCawx7lOZfoeOBV8-o77M8s6s8XD2Ryo4TZ5GKijGSU4qYH162-k2nNLKNR2WiRE6Yxlgq_smA",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url:80}}/api/v1/asset/request/status",
+									"host": [
+										"{{url:80}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"asset",
+										"request",
+										"status"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Add",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTk0MzI1OCwiaWF0IjoxNjQ1ODU2ODU4LCJhdXRob3JpdGllcyI6WyJST0xFX09SR19BRE1JTiJdfQ.GB4VexlybZj4RCawx7lOZfoeOBV8-o77M8s6s8XD2Ryo4TZ5GKijGSU4qYH162-k2nNLKNR2WiRE6Yxlgq_smA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"assetNo\": \"SFW/ED/LP/001\",\r\n    \"name\": \"Lenovo Ideapad 320\",\r\n    \"brand\": \"Lenovo\",\r\n    \"config\": \"8 GB RAM, Intel(R) Core(TM) i3-6006U CPU @ 2.00 GHz 1.99 GHz\",\r\n    \"category\": \"Electronics\",\r\n    \"enrollmentDate\": \"2022-01-01\",\r\n    \"lastServiceDate\": \"2022-01-01\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url:80}}/api/v1/asset/add",
+							"host": [
+								"{{url:80}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"asset",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTk0MzI1OCwiaWF0IjoxNjQ1ODU2ODU4LCJhdXRob3JpdGllcyI6WyJST0xFX09SR19BRE1JTiJdfQ.GB4VexlybZj4RCawx7lOZfoeOBV8-o77M8s6s8XD2Ryo4TZ5GKijGSU4qYH162-k2nNLKNR2WiRE6Yxlgq_smA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url:80}}/api/v1/asset/all?category=Electronics&page=1&size=10",
+							"host": [
+								"{{url:80}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"asset",
+								"all"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "Electronics"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Asset History",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzUxMiJ9.eyJ1aWQiOiIwNTgwZmE5NS1kN2I0LTQ2ZjEtOGM2Mi1lYjdmOTQ0NDQyMGMiLCJ1c2VyX25hbWUiOiJhZG1pbiIsImV4cCI6MTY0NTk0MzI1OCwiaWF0IjoxNjQ1ODU2ODU4LCJhdXRob3JpdGllcyI6WyJST0xFX09SR19BRE1JTiJdfQ.GB4VexlybZj4RCawx7lOZfoeOBV8-o77M8s6s8XD2Ryo4TZ5GKijGSU4qYH162-k2nNLKNR2WiRE6Yxlgq_smA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url:80}}/api/v1/asset/history/all?assetNo=SFW/ED/LP/001&page=1&size=10",
+							"host": [
+								"{{url:80}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"asset",
+								"history",
+								"all"
+							],
+							"query": [
+								{
+									"key": "assetNo",
+									"value": "SFW/ED/LP/001"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"usernameOrEmail\": \"sduraipandi\",\r\n    \"password\": \"sduraipandi\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url:80}}/api/v1/auth/login",
+					"host": [
+						"{{url:80}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
