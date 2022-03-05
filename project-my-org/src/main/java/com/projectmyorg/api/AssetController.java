@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.projectmyorg.domain.enums.ERole;
+import com.projectmyorg.domain.enums.Status;
 import com.projectmyorg.dto.CommonResponse;
 import com.projectmyorg.dto.PageResponse;
 import com.projectmyorg.dto.SingleStrRequestDto;
@@ -64,7 +64,7 @@ public class AssetController {
 	@GetMapping("/request/status")
 	@PreAuthorize("hasAuthority('ROLE_ORG_ADMIN') or hasAuthority('ROLE_USER')")
 	public ResponseEntity<CommonResponse> findAllRequestStatus() {
-		return ResponseEntity.ok(new CommonResponse(ERole.values()));
+		return ResponseEntity.ok(new CommonResponse(Status.values()));
 	}
 
 	@PostMapping("/request")

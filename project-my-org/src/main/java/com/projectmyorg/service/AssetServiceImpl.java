@@ -3,6 +3,7 @@
  */
 package com.projectmyorg.service;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -159,7 +160,11 @@ public class AssetServiceImpl implements AssetService {
 		Optional<Asset> assetOpt = findAssetByNo(request.getAssetNo());
 		if (!assetOpt.isPresent())
 			throw new BadRequestException("Asset not found!");
-
+		
+		Date lastUserEnrollExpiry = assetOpt.get().getLastUserEnrollExpiry();
+		if (lastUserEnrollExpiry != null && lastUserEnrollExpiry.after(DateUtils.currentDate()))
+			throw new BadRequestException("Asset is already enrolled by another user.");
+		
 		try {
 			AssetRequest assetRequest = new AssetRequest();
 			assetRequest.setUuid(AppUtils.strUUID());
@@ -237,8 +242,12 @@ public class AssetServiceImpl implements AssetService {
 				history.setCurrentlyOwnedBy(assetRequest.getRequestedBy());
 				assetHistoryRepo.save(history);
 				LOGGER.info("Added asset history");
+				
+				Asset asset = assetRequest.getAsset();
+				asset.setLastUserEnrollExpiry(history.getEnrollExpiryDate());
+				assetRepository.save(asset);
+				LOGGER.info("Asset user enroll expiry updated");
 			}
-
 			LOGGER.info("Asset request status has been updated. updated by {}", loggedInUserName);
 			return new BaseResponse();
 		} catch (Exception e) {
