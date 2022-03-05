@@ -65,6 +65,11 @@ public class Asset implements Serializable {
 	@Temporal(TemporalType.DATE)
 	@Column(name = "last_service_date")
 	private Date lastServiceDate;
+	
+	@Basic
+	@Temporal(TemporalType.DATE)
+	@Column(name = "last_user_enroll_expiry")
+	private Date lastUserEnrollExpiry;
 
 	/**
 	 * @return the id
@@ -176,6 +181,20 @@ public class Asset implements Serializable {
 	 */
 	public void setLastServiceDate(Date lastServiceDate) {
 		this.lastServiceDate = lastServiceDate;
+	}
+	
+	/**
+	 * @return the lastUserEnrollExpiry
+	 */
+	public Date getLastUserEnrollExpiry() {
+		return lastUserEnrollExpiry;
+	}
+
+	/**
+	 * @param lastUserEnrollExpiry the lastUserEnrollExpiry to set
+	 */
+	public void setLastUserEnrollExpiry(Date lastUserEnrollExpiry) {
+		this.lastUserEnrollExpiry = lastUserEnrollExpiry;
 	}
 
 	/**
